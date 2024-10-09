@@ -23,11 +23,12 @@ img { border: none;
 
 #footernav { 
 	width: 80%;
-	font-size: .75em;
+	font-size: .95em;
 	text-align: center;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-evenly;}
+	justify-content: space-evenly;
+	background-color: #CDB4EA}
 
 #imgnav { margin-left: auto;
 	margin-right: auto;

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en_US">
 <head>
-<title>Aspired Creativity - Successful Cast</title>
+<title>Cynde Creativity - Successful Cast</title>
 
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
-<link href="creativity.css" rel="stylesheet" type="text/css" />
+<link href="creativity.css" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -31,15 +31,18 @@
 
     <div id="rightcolumn">
       <a href="javascript: history.go(-1)">Back</a><br />
-      <div class="fb-like" data-href="http://www.facebook.com/AspiredCreativity" data-send="false" data-width="200" data-show-faces="true"></div>
+      <div class="fb-like" data-href="http://www.facebook.com/CyndeCreativity" data-send="false" data-width="200" data-show-faces="true"></div>
     </div>
 
     <div id="leftcolumn">
       <h3>Thank you!</h3>
+      <script>
+        // Retrieve the saved data from local storage and display it
+        const data = localStorage.getItem('formData');
+        document.getElementById('submissionData').innerHTML = data || 'No data found.';
+    </script>
 
-      Thank you for submitting your question, comment, or suggestion. Due to the volume of work and emails that I get, I won't be able to get back to you immediately, but I will do my best to respond.
-      <br /><br />
-      As stated previously, any information sent to me will remain confidential.
+      <div id="submissionData"></div>       
 
     </div>
     <br />

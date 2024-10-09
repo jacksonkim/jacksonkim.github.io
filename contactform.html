@@ -8,6 +8,38 @@
 
 	<link href="creativity.css" rel="stylesheet" type="text/css" />
 
+	<script>
+        function saveData(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Collect form data
+            const name = document.getElementById('custName').value;
+            const email = document.getElementById('custEmail').value;
+            const subject = document.getElementById('custSub').value;
+            const comment = document.getElementById('custComment').value;
+            const state = document.getElementById('custState').value;
+            const items = Array.from(document.querySelectorAll('input[name="items[]"]:checked'))
+                               .map(item => item.value).join(', ');
+            const agree = document.querySelector('input[name="agree"]:checked').value;
+
+            // Create a string to display the data
+            const displayData = `
+                <h2>Form Submission Data</h2>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Subject:</strong> ${subject}</p>
+                <p><strong>Comment:</strong> ${comment}</p>
+                <p><strong>State:</strong> ${state}</p>
+                <p><strong>Favorite Items:</strong> ${items || 'None'}</p>
+                <p><strong>Interested in more items:</strong> ${agree}</p>
+            `;
+
+            // Save the data to local storage (or you could directly display it)
+            localStorage.setItem('formData', displayData);
+            window.location.href = 'formthanks.html'; // Redirect to thank you page
+        }
+    </script>
+
 </head>
 
 <body>
@@ -48,11 +80,9 @@
 	<br /><br />
 	<small>**Any information sent to me will remain confidential.**</small>
 	<br /><br />
-	<form action="contact_action.php" method="post">
-        <!-- Hidden fields -->
-        <input type="hidden" name="sendto" id="sendto" value="cyndecreativity@gmail.com" />
-        <input type="hidden" name="subject" value="Form Submission from %%CustName%%" />
-        <input type="hidden" name="required" value="custName,custComment,custEmail,custSub" />
+	<form onsubmit="saveData(event)">
+        <!-- Hidden fields and other fields -->
+        <input type="hidden" name="sendto" value="cyndecreativity@gmail.com" />
         <input type="hidden" name="thankyou_url" value="formthanks.html" />
         <input type="hidden" name="error_url" value="formderp.html" />
 
@@ -61,20 +91,20 @@
                 <td colspan="2">All fields are required.<br /></td>
             </tr>
             <tr>
-                <td align="right" width="10%"><label for="custName">Name:</label> </td>
-                <td><input type="text" name="custName" id="custName" size="30" required /></td>
+                <td align="right"><label for="custName">Name:</label></td>
+                <td><input type="text" name="custName" id="custName" required /></td>
             </tr>
             <tr>
-                <td align="right" width="10%"><label for="custEmail">Your Email:</label></td>
-                <td><input type="email" name="custEmail" id="custEmail" size="30" required /></td>
+                <td align="right"><label for="custEmail">Your Email:</label></td>
+                <td><input type="email" name="custEmail" id="custEmail" required /></td>
             </tr>
             <tr>
-                <td align="right" width="10%"><label for="custSub">Subject Line:</label> </td>
-                <td><input type="text" name="custSub" id="custSub" value="Inquiry from Aspired Creativity Website" size="30" required /></td>
+                <td align="right"><label for="custSub">Subject Line:</label></td>
+                <td><input type="text" name="custSub" id="custSub" required /></td>
             </tr>
             <tr>
                 <td colspan="2"><label for="custComment">Questions, Comments, Suggestions:</label><br />
-                <textarea rows="5" cols="40" name="custComment" id="custComment" required>Please enter your questions, comments, and suggestions, here. :3</textarea></td>
+                <textarea name="custComment" id="custComment" required></textarea></td>
             </tr>
             <tr>
                 <td colspan="2">Please tell us where you are from:
