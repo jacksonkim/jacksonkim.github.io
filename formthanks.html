@@ -36,13 +36,12 @@
 
     <div id="leftcolumn">
       <h3>Thank you!</h3>
-      <script>
-        // Retrieve the saved data from local storage and display it
-        const data = localStorage.getItem('formData');
-        document.getElementById('submissionData').innerHTML = data || 'No data found.';
-    </script>
-
-      <div id="submissionData"></div>       
+        <div id="submissionData"></div>
+        <script>
+          // Retrieve the saved data from local storage and display it
+          const data = localStorage.getItem('contactData');
+          document.getElementById('submissionData').innerHTML = data || 'No data found.';
+      </script>
 
     </div>
     <br />

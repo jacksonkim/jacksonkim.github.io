@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en_US">
 <head>
 	<title>Cynde Creativity - Scroll of Feedback</title>
 
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
 
-	<link href="creativity.css" rel="stylesheet" type="text/css" />
-
+	<link href="creativity.css" rel="stylesheet" type="text/css" >
+<!--
 	<script>
         function saveData(event) {
             event.preventDefault(); // Prevent default form submission
@@ -35,11 +35,11 @@
             `;
 
             // Save the data to local storage (or you could directly display it)
-            localStorage.setItem('formData', displayData);
+            localStorage.setItem('contactData', displayData);
             window.location.href = 'formthanks.html'; // Redirect to thank you page
         }
     </script>
-
+-->
 </head>
 
 <body>
@@ -56,58 +56,57 @@
 	<div id="container"><a name="top"></a>
 
 	<div id="imgnav">
-		<a href="index.html"><img src="cyndebanner2-75.png" alt="Cynde Creativity Banner" /></a>
-		<a href="index.html"><img src="homeButton.png" alt="Home" /></a>
-		<a href="products.html"><img src="productsButton.png" alt="Products" /></a>
-		<a href="maintenance.html"><img src="maintButton.png" alt="Maintenance Hatch" /></a>
-		<a href="beadiator.html"><img src="aboutButton.png" alt="About the Beadiator" /></a>
-		<a href="contactform.html"><img src="contactButton.png" alt="Contact Form" /></a>
+		<a href="index.html"><img src="cyndebanner2-75.png" alt="Cynde Creativity Banner" ></a>
+		<a href="index.html"><img src="homeButton.png" alt="Home" ></a>
+		<a href="products.html"><img src="productsButton.png" alt="Products" ></a>
+		<a href="maintenance.html"><img src="maintButton.png" alt="Maintenance Hatch" ></a>
+		<a href="beadiator.html"><img src="aboutButton.png" alt="About the Beadiator" ></a>
+		<a href="contactform.html"><img src="contactButton.png" alt="Contact Form" ></a>
 	</div>
-	<br />
+	<br >
 
 	<div id="rightcolumn">
-	<a href="javascript: history.go(-1)">Back</a><br />
-	<div class="fb-like" data-href="http://www.facebook.com/CyndeCreativity" data-send="false" data-width="200" data-show-faces="true"></div>
+		<a href="javascript: history.go(-1)">Back</a><br >
+		<div class="fb-like" data-href="http://www.facebook.com/CyndeCreativity" data-send="false" data-width="200" data-show-faces="true"></div>
 	</div>
 
 	<div id="leftcolumn">
 	<h1>Contact</h1>
 	If nothing on the site has interested you or helped you in any way, please feel free to send the Beadiator an email.
-	<br /><br />
+	<br ><br >
 	Email me <a href="mailto:cyndecreativity@gmail.com">here</a>. Please be sure to use a subject that pertains to your question, comment, suggestion, or flame.
-	<br /><br />
+	<br ><br >
 	I am always grateful for some kind of feedback.
-	<br /><br />
+	<br ><br >
 	<small>**Any information sent to me will remain confidential.**</small>
-	<br /><br />
-	<form onsubmit="saveData(event)">
-        <!-- Hidden fields and other fields -->
-        <input type="hidden" name="sendto" value="cyndecreativity@gmail.com" />
-        <input type="hidden" name="thankyou_url" value="formthanks.html" />
-        <input type="hidden" name="error_url" value="formderp.html" />
+	<br ><br >
+	<form id="contactForm">
+		<table border="1">
+            <tr>
+                <td colspan="2">All fields are required.</td>
+            </tr>
 
-        <table border="1">
             <tr>
-                <td colspan="2">All fields are required.<br /></td>
+				<td align="right"><label for="custName">Your Name:</label></td>
+				<td><input type="text" id="custName" name="custName" required></td>
+			</tr>
+
+            <tr>
+				<td align="right"><label for="custEmail">Your Email:</label></td>
+				<td><input type="email" id="custEmail" name="custEmail" required></td>
+			</tr>
+
+			<tr>
+ 		        <td align="right"><label for="custSub">Subject:</label></td>
+        		<td><input type="text" id="custSub" name="custSub"></td>
+			</tr>
+
+			<tr>
+				<td align="right"><label for="custComment">Comment:</label></td>
+				<td><textarea id="custComment" name="custComment" rows="4" cols="50"></textarea></td>
             </tr>
             <tr>
-                <td align="right"><label for="custName">Name:</label></td>
-                <td><input type="text" name="custName" id="custName" required /></td>
-            </tr>
-            <tr>
-                <td align="right"><label for="custEmail">Your Email:</label></td>
-                <td><input type="email" name="custEmail" id="custEmail" required /></td>
-            </tr>
-            <tr>
-                <td align="right"><label for="custSub">Subject Line:</label></td>
-                <td><input type="text" name="custSub" id="custSub" required /></td>
-            </tr>
-            <tr>
-                <td colspan="2"><label for="custComment">Questions, Comments, Suggestions:</label><br />
-                <textarea name="custComment" id="custComment" required></textarea></td>
-            </tr>
-            <tr>
-                <td colspan="2">Please tell us where you are from:
+                <td colspan="2"><label for="custState">Please tell us where you are from: </label>
                     <select size="1" name="custState" id="custState" required>
                         <option value="">Select a State</option>
                         <option value="AL">Alabama</option>
@@ -166,36 +165,65 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <fieldset> 
-                        <legend>Favorite items for sale here:</legend><br />
-                        <input type="checkbox" name="items[]" id="earrings" value="earrings" />
-                        <label for="earrings">Earrings</label>
-
-                        <input type="checkbox" name="items[]" id="necklaces" value="necklaces" />
-                        <label for="necklaces">Necklaces</label>
-
-                        <input type="checkbox" name="items[]" id="bracelets" value="bracelets" />
-                        <label for="bracelets">Bracelets</label>
-                    </fieldset>
+                    <label for="favorites">Favorite items for sale here:</label><br>
+                    <input type="checkbox" name="items[]" id="earrings" value="earrings"> Earrings <br>
+                    <input type="checkbox" name="items[]" id="necklaces" value="necklaces"> Necklaces <br>
+                    <input type="checkbox" name="items[]" id="bracelets" value="bracelets"> Bracele<br>
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
-                    <fieldset>
-                        <legend>Would you like to see more and different things for sale from Aspired Creativity?</legend><br />
-                        <input type="radio" name="agree" id="agree" value="yes" required />Yes<br />
-                        <input type="radio" name="agree" id="nope" value="no" />Nope.gif<br /><br />
+                        <label for="future">Would you like to see more and different things for sale from Cynde Creativity?</label><br>
+                        <input type="radio" name="agree" id="agree" value="yes" required >Yes<br>
+                        <input type="radio" name="agree" id="nope" value="no">Nope.gif<br><br>
                     </fieldset>
                 </td>
             </tr>
             <tr>
-                <td align="right"><input type="submit" value="Send" /></td>
-                <td><input type="reset" /></td>
+                <td align="right"><button type="submit" value="Send">Send</button></td>
+                <td><input type="reset"></td>
             </tr>
         </table>
     </form>
 	</div>
-	<br />
+	    <!-- Area to display the submission data -->
+		<div id="submissionData" style="margin-top: 20px;"></div>
+
+		<script>
+			// Get the form element
+			const form = document.getElementById('contactForm');
+	
+			// Listen for form submission
+			form.addEventListener('submit', function(event) {
+				event.preventDefault();  // Prevent form from reloading the page
+	
+				// Collect form data
+				const name = document.getElementById('custName').value;
+				const email = document.getElementById('custEmail').value;
+				const subject = document.getElementById('custSub').value;
+				const comment = document.getElementById('custComment').value;
+				const state = document.getElementById('custState').value;
+				const items = Array.from(document.querySelectorAll('input[name="items[]"]:checked'))
+								   .map(item => item.value).join(', ');
+				const agree = document.querySelector('input[name="agree"]:checked').value;
+	
+				// Create a string to display the data
+				const displayData = `
+					<h3>Form Submission Data</h3>
+					<p><strong>Name:</strong> ${name}</p>
+					<p><strong>Email:</strong> ${email}</p>
+					<p><strong>Subject:</strong> ${subject}</p>
+					<p><strong>Comment:</strong> ${comment}</p>
+					<p><strong>State:</strong> ${state}</p>
+					<p><strong>Favorite Items:</strong> ${items || 'None'}</p>
+					<p><strong>Interested in more items:</strong> ${agree}</p>
+				`;
+	
+				// Display the data on the same page
+				document.getElementById('submissionData').innerHTML = displayData;
+			});
+		</script>
+	<br >
 
 	<div id="footer">
 		<div id="footernav">
@@ -207,10 +235,10 @@
 			<a href="contactform.html">Contact Form</a>
 		</div>
 		
-		<br /><a href="#top">Back to Top ^</a>
-		<br />
-		Copyright &copy; 2012 Aspired Creativity - <a href="mailto:kjackson@aspiredcreativity.com">Kimberly Jackson</a>
-		<br />
+		<br ><a href="#top">Back to Top ^</a>
+		<br >
+			Copyright &copy; 2024 Cynde Creativity - <a href="mailto:cyndecreativity@gmail.com">Kimberly Jackson</a>
+		<br >
 	</div>
 
 </div>
