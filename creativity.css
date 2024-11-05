@@ -16,6 +16,16 @@ a:visited { color: #FFFFFF; }
 img { border: none;
 	padding: 2px; }
 
+.banner {
+	width: 90%;
+	height: auto;
+}	
+
+.menuImage {
+	width: 230px;
+	height: auto;
+}
+
 .category { font-weight: bold;
 	font-size: 1.2em; }
 

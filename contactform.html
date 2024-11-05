@@ -56,12 +56,12 @@
 	<div id="container"><a name="top"></a>
 
 	<div id="imgnav">
-		<a href="index.html"><img src="cyndebanner2-75.png" alt="Cynde Creativity Banner" ></a>
-		<a href="index.html"><img src="homeButton.png" alt="Home" ></a>
-		<a href="products.html"><img src="productsButton.png" alt="Products" ></a>
-		<a href="maintenance.html"><img src="maintButton.png" alt="Maintenance Hatch" ></a>
-		<a href="beadiator.html"><img src="aboutButton.png" alt="About the Beadiator" ></a>
-		<a href="contactform.html"><img src="contactButton.png" alt="Contact Form" ></a>
+		<a href="index.html"><img src="cyndebanner2-75.png" alt="Cynde Creativity Banner" class="banner"></a>
+		<a href="index.html"><img src="homeButton.png" alt="Home" class="menuImage"></a>
+		<a href="products.html"><img src="productsButton.png" alt="Products" class="menuImage"></a>
+		<a href="maintenance.html"><img src="maintButton.png" alt="Maintenance Hatch" class="menuImage"></a>
+		<a href="beadiator.html"><img src="aboutButton.png" alt="About the Beadiator" class="menuImage"></a>
+		<a href="contactform.html"><img src="contactButton.png" alt="Contact Form" class="menuImage"></a>
 	</div>
 	<br >
 
@@ -80,7 +80,7 @@
 	<br ><br >
 	<small>**Any information sent to me will remain confidential.**</small>
 	<br ><br >
-	<form id="contactForm">
+	<form id="contactForm" action="/submit" method="POST">
 		<table border="1">
             <tr>
                 <td colspan="2">All fields are required.</td>
@@ -168,7 +168,7 @@
                     <label for="favorites">Favorite items for sale here:</label><br>
                     <input type="checkbox" name="items[]" id="earrings" value="earrings"> Earrings <br>
                     <input type="checkbox" name="items[]" id="necklaces" value="necklaces"> Necklaces <br>
-                    <input type="checkbox" name="items[]" id="bracelets" value="bracelets"> Bracele<br>
+                    <input type="checkbox" name="items[]" id="bracelets" value="bracelets"> Bracelets<br>
                 </td>
             </tr>
             <tr>
@@ -187,9 +187,9 @@
     </form>
 	</div>
 	    <!-- Area to display the submission data -->
-		<div id="submissionData" style="margin-top: 20px;"></div>
+		<div id="submissionData" style="margin-top: 20px;">
 
-		<script>
+		<!--<script>
 			// Get the form element
 			const form = document.getElementById('contactForm');
 	
@@ -209,7 +209,7 @@
 	
 				// Create a string to display the data
 				const displayData = `
-					<h3>Thank you! Your response has been recorded.</h3>
+					<h3>Form Submission Data</h3>
 					<p><strong>Name:</strong> ${name}</p>
 					<p><strong>Email:</strong> ${email}</p>
 					<p><strong>Subject:</strong> ${subject}</p>
@@ -220,11 +220,11 @@
 				`;
 	
 				// Display the data on the same page
-				document.getElementById('submissionData').innerHTML = displayData;
+				//document.getElementById('submissionData').innerHTML = displayData;
 			});
-		</script>
+		</script>-->
 	<br >
-
+		</div>
 	<div id="footer">
 		<div id="footernav">
 			<a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;

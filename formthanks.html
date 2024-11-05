@@ -20,12 +20,12 @@
   }(document, 'script', 'facebook-jssdk'));</script>
   <div id="container"><a name="top"></a>
     <div id="imgnav">
-      <a href="index.html"><img src="cyndebanner2-75.png" alt="Cynde Creativity Banner" /></a>
-      <a href="index.html"><img src="homeButton.png" alt="Home" /></a>
-      <a href="products.html"><img src="productsButton.png" alt="Products" /></a>
-      <a href="maintenance.html"><img src="maintButton.png" alt="Maintenance Hatch" /></a>
-      <a href="beadiator.html"><img src="aboutButton.png" alt="About the Beadiator" /></a>
-      <a href="contactform.html"><img src="contactButton.png" alt="Contact Form" /></a>
+			<a href="index.html"><img src="cyndebanner2-75.png" alt="Cynde Creativity Banner" class="banner"></a>
+			<a href="index.html"><img src="homeButton.png" alt="Home" class="menuImage"></a>
+			<a href="products.html"><img src="productsButton.png" alt="Products" class="menuImage"></a>
+			<a href="maintenance.html"><img src="maintButton.png" alt="Maintenance Hatch" class="menuImage"></a>
+			<a href="beadiator.html"><img src="aboutButton.png" alt="About the Beadiator" class="menuImage"></a>
+			<a href="contactform.html"><img src="contactButton.png" alt="Contact Form" class="menuImage"></a>
     </div>
     <br />
 
@@ -35,12 +35,16 @@
     </div>
 
     <div id="leftcolumn">
-      <h3>Thank you!</h3>
-        <div id="submissionData"></div>
-        <script>
-          // Retrieve the saved data from local storage and display it
-          const data = localStorage.getItem('contactData');
-          document.getElementById('submissionData').innerHTML = data || 'No data found.';
+      <h1>Thank You, <span id="custName"></span>!</h1>
+      <p>We have received your feedback.</p>
+
+      <script>
+        // Extract 'custName' from the query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const custName = urlParams.get('custName');
+
+        // Insert the customer's name into the page
+        document.getElementById('custName').textContent = custName;
       </script>
 
     </div>
