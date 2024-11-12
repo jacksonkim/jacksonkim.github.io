@@ -2,6 +2,24 @@
 		margin-right: auto;
 		width: 80%; }
 
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+	.container {
+	  padding: 10px;
+	}
+  }
+  
+  /* Small screens (phones) */
+@media (max-width: 480px) {
+	body {
+	  font-size: 14px; /* Reduce font size on small screens */
+	}
+  
+	.container {
+	  padding: 5px;
+	}
+  }
+
 body { background-color: #ffdfff;
 	background-image: url("pink_grid.png");
 	font-family: Century Gothic, Segoe UI, sans-serif;
