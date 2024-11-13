@@ -162,17 +162,17 @@ h2 {
 		display: none;
 	}
   
-	#leftcolumn { width: 100%;
+	#leftcolumn { width: 90%;
 		padding: 10px;
 	}
 
-	#footer { width: 100%;
+	#footer { width: 95%;
 		padding: 5px;
 		flex-direction: column;
 	    align-items: center;
 	}
 
-	#footernav { width: 100%;
+	#footernav { width: 95%;
 		padding: 5px;
 		flex-direction: column;
 	    align-items: center;
@@ -214,17 +214,17 @@ h2 {
 		display: none;
 	}
 
-	#leftcolumn { width: 100%;
+	#leftcolumn { width: 90%;
 		padding: 5px;
 	}
 
-	#footernav { width: 100%;
+	#footernav { width: 95%;
 		padding: 5px;
 		flex-direction: column;
 	    align-items: center;
 	}
 
-	#footer { width: 100%;
+	#footer { width: 95%;
 		padding: 5px;
 		flex-direction: column;
 	    align-items: center;
